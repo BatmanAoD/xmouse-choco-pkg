@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>xmouse-controls</id>
+    <version>v1.1.0.0</version>
+    <packageSourceUrl>https://github.com/joelpurra/xmouse-controls</packageSourceUrl>
+    <!-- "owners" is a misnomer; it means the maintainers of the package -->
+    <owners>batmanaod</owners>
+
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>xmouse-controls</title>
+    <authors>Joel Purra</authors>
+    <projectUrl>https://joelpurra.com/projects/X-Mouse_Controls/</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/joelpurra/xmouse-controls/28b8b4bba60da7590b97af242d4364655347b96d/Graphics/icon/X-Mouse%20Controls%2002/X-Mouse%20Controls%2002-128x128.png</iconUrl>
+    <copyright>2023 Joel Purra</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/joelpurra/xmouse-controls</projectSourceUrl>
+    <docsUrl>https://joelpurra.com/projects/X-Mouse_Controls/#usage</docsUrl>
+    <bugTrackerUrl>https://github.com/joelpurra/xmouse-controls/issues?q=is%3Aissue+is%3Aopen</bugTrackerUrl>
+    <tags>xmouse-controls SPACE_SEPARATED</tags>
+    <summary>__REPLACE__</summary>
+    <description>__REPLACE__MarkDown_Okay </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
+         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
+         - You want to use Get-PackageParameters and on less than 0.11.0
+         - You want to take advantage of other functions in the core community maintainer's team extension package
+    -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
