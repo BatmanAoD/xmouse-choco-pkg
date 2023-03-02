@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xmouse-controls</id>
-    <version>v1.1.0.0</version>
-    <packageSourceUrl>https://github.com/joelpurra/xmouse-controls</packageSourceUrl>
+    <version>1.1.0.0</version>
+    <packageSourceUrl>https://github.com/BatmanAoD/xmouse-choco-pkg</packageSourceUrl>
     <!-- "owners" is a misnomer; it means the maintainers of the package -->
     <owners>batmanaod</owners>
 
@@ -22,33 +22,41 @@
     <projectSourceUrl>https://github.com/joelpurra/xmouse-controls</projectSourceUrl>
     <docsUrl>https://joelpurra.com/projects/X-Mouse_Controls/#usage</docsUrl>
     <bugTrackerUrl>https://github.com/joelpurra/xmouse-controls/issues?q=is%3Aissue+is%3Aopen</bugTrackerUrl>
-    <tags>xmouse-controls SPACE_SEPARATED</tags>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <tags>xmouse-controls windows xmouse activewindowtracking focusfollowsmouse</tags>
+    <summary>Microsoft Windows utility to manage the active window tracking/raising settings. This is known as x-mouse behavior or focus follows mouse on Unix and Linux systems.</summary>
+    <description>
+# X-Mouse Controls
+
+Microsoft Windows utility to manage the *active window tracking/raising* settings. This is known as *x-mouse behavior* or *focus follows mouse* on Unix and Linux systems.
+
+Works on Windows 11, Windows 10, Windows 8, Windows 7, Windows Vista, Windows XP, Windows Server 2012, Windows Server 2008, Windows Server 2003. Might work on other versions as well.
+
+## What is x-mouse behavior?
+
+When multiple programs are running on a Windows operating system, the default mode of operations is that you click one window after another to give them focus for keyboard inputs. With the x-mouse settings that click is not necessary &mdash; the only thing needed is to move your cursor over the window for it to become active.
+
+This behavior has been possible, but disabled, in different versions of Windows for years. It is usually enabled through Windows accessibility settings or a wide variety of tools and utilities, most notably Tweak UI found in Microsoft PowerToys. However, Tweak UI does not run on Windows Vista, Windows 7, Windows 8, Windows 10, Windows 11, Windows Server 2008, Windows Server 2012, and later versions, which is why I created this utility.
+    </description>
+
+    <releaseNotes>
+* Minimize the main window. Requested in [#5](https://github.com/joelpurra/xmouse-controls/issues/5) by [bitofhope](https://github.com/bitofhope). Fixed in [#6](https://github.com/joelpurra/xmouse-controls/issues/6), thank you [Nathan Phillip Brink][binki]!
+* Can run on Windows 10 without downloading .NET Framework 3.5. Both request in [#11](https://github.com/joelpurra/xmouse-controls/issues/11) and fixed in [#12](https://github.com/joelpurra/xmouse-controls/issues/12) by [Nathan Phillip Brink][binki], thank you!
+* More usage information and tips in the main window.
+* Reflect system settings changes in the X-Mouse Controls window.
+* Update icon to depict a focused window below an unfocused window (instead of a focused window on top of an unfocused window). Graphics were updated by [Miroslava Jovičić](https://miroslavajovicic.net/), thank you!
+
+[binki]: https://github.com/binki
+</releaseNotes>
     <!-- =============================== -->
 
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    <!--
+        The only dependency is .NET Framework 3.5 or later.
+        TODO: detect .NET framework version(s) in the install script, and return an error if it's not installed.
+        TODO: also detect Windows versions pre-XP?
+    <dependencies>
     </dependencies>-->
-    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
   </files>
 </package>
