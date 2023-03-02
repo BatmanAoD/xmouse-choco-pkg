@@ -33,7 +33,7 @@ Works on Windows 11, Windows 10, Windows 8, Windows 7, Windows Vista, Windows XP
 
 ## What is x-mouse behavior?
 
-When multiple programs are running on a Windows operating system, the default mode of operations is that you click one window after another to give them focus for keyboard inputs. With the x-mouse settings that click is not necessary &mdash; the only thing needed is to move your cursor over the window for it to become active.
+When multiple programs are running on a Windows operating system, the default mode of operations is that you click one window after another to give them focus for keyboard inputs. With the x-mouse settings that click is not necessary — the only thing needed is to move your cursor over the window for it to become active.
 
 This behavior has been possible, but disabled, in different versions of Windows for years. It is usually enabled through Windows accessibility settings or a wide variety of tools and utilities, most notably Tweak UI found in Microsoft PowerToys. However, Tweak UI does not run on Windows Vista, Windows 7, Windows 8, Windows 10, Windows 11, Windows Server 2008, Windows Server 2012, and later versions, which is why I created this utility.
     </description>
