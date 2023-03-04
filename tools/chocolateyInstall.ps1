@@ -11,4 +11,5 @@ Write-Warning ($packageArgs | Out-String)
 
 Get-ChocolateyUnzip @packageArgs
 
-New-Item -ItemType file "$toolsPath\X-Mouse Controls.exe.gui"
+# Create `...exe.gui` if it does not already exist
+$null >> "$toolsPath\X-Mouse Controls.exe.gui"
