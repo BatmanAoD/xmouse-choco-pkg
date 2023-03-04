@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xmouse-controls</id>
-    <version>1.1.0.0-testing</version>
+    <version>1.1.0.0</version>
     <packageSourceUrl>https://github.com/BatmanAoD/xmouse-choco-pkg</packageSourceUrl>
     <!-- "owners" is a misnomer; it means the maintainers of the package -->
     <owners>batmanaod</owners>
