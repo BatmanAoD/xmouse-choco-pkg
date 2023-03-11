@@ -6,9 +6,6 @@ $packageArgs = @{
     Destination  = $toolsPath
 }
 
-# XXX TEMP
-Write-Warning ($packageArgs | Out-String)
-
 Get-ChocolateyUnzip @packageArgs
 
 # Create `...exe.gui` if it does not already exist
