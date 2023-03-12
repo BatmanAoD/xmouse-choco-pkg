@@ -6,5 +6,10 @@ behavior as desired.
 
 Write-Warning $message
 
-# No further action is required. The unzipped files will be deleted
-# automatically.
+# Delete the Start menu shortcut
+$shortcutName = "X-Mouse Controls.lnk"
+$programs = [environment]::GetFolderPath([environment+specialfolder]::Programs)
+$shortcutFilePath = Join-Path $programs $shortcutName 
+if (Test-Path $shortcutFilePath) {
+  Remove-Item $shortcutFilePath
+}
