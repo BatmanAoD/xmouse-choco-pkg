@@ -48,12 +48,9 @@ This behavior has been possible, but disabled, in different versions of Windows 
 [binki]: https://github.com/binki
 </releaseNotes>
     <!-- =============================== -->
-
     <!--
-        The only dependency is .NET Framework 3.5 or later.
-        TODO: detect .NET framework version(s) in the install script, and return an error if it's not installed.
-        TODO: also detect Windows versions pre-XP?
-    <dependencies>
+        The only dependency is .NET Framework 3.5 or later. This is effectively
+        guaranteed to be available on any system that can run Chocolatey.
     </dependencies>-->
   </metadata>
   <files>
