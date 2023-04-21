@@ -1,3 +1,43 @@
-﻿VERIFICATION
+﻿# VERIFICATION
 
-Pgp signature: https://files.joelpurra.com/projects/x-mouse-controls/2018-10-06T1730Z/x-mouse_controls_2018-10-06T1730Z_release.zip.asc
+The software author, Joel Purra, provides a public key that can be seen on his
+[contact page]. It has fingerprint `4C47B4FF173AE6ED0DB733946DF6890D2A977668`,
+and can be imported into `gpg` as follows:
+
+```
+gpg --keyserver 'hkps://keys.openpgp.org/' --recv-key 4C47B4FF173AE6ED0DB733946DF6890D2A977668
+```
+
+Alternatively, it may be downloaded explicitly from his website:
+
+```
+curl 'https://joelpurra.com/key/mig-at-joelpurra.se-4C47B4FF173AE6ED0DB733946DF6890D2A977668.pgp.pubkey' | gpg --import
+```
+
+The PGP signature for the software can be downloaded as an `.asc` file
+[here][xmouse-pgp]. After downloading it, you can verify the zip file (which
+can be found in Chocolatey's `lib\xmouse-controls\tools` folder) as follows:
+
+```
+gpg --verify <path-to-asc> <path-to-zip>
+```
+
+The subkey used to sign X-Mouse Controls has been superseded, so you should see
+a message like this:
+
+```
+gpg: Signature made 10/6/2018 11:43:48 AM Mountain Daylight Time
+gpg:                using RSA key F1180AC410DF506C1BA92C041D9F8BDB0CEFA940
+gpg: Good signature from "Joel Purra <mig@joelpurra.se>" [unknown]
+gpg:                 aka "Joel Purra <me@joelpurra.com>" [unknown]
+gpg:                 aka "[jpeg image of size 4521]" [unknown]
+gpg: WARNING: This subkey has been revoked by its owner!
+gpg: reason for revocation: Key is superseded
+gpg: revocation comment: Superseded by "ssb  rsa4096/82DEF4832B487331      created: 2019-01-04  expires: 2020-02-28  usage: S"
+gpg: Note: This key has expired!
+Primary key fingerprint: 4C47 B4FF 173A E6ED 0DB7  3394 6DF6 890D 2A97 7668
+     Subkey fingerprint: F118 0AC4 10DF 506C 1BA9  2C04 1D9F 8BDB 0CEF A940
+```
+
+[contact page]: https://joelpurra.com/contact/
+[xmouse-pgp]: https://files.joelpurra.com/projects/x-mouse-controls/2018-10-06T1730Z/x-mouse_controls_2018-10-06T1730Z_release.zip.asc
